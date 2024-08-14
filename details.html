@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="details.js" defer></script>
+</head>
+<style>
+  
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    width: 80%;
+}
+
+.card {
+    display: block;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card:hover {
+    background: #e0e0e0;
+}
+
+.details-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #0056b3;
+}
+
+</style>
+<body>
+    <div class="details-container">
+        <h1>Card Details</h1>
+        <p id="card-details">Loading details...</p>
+        <a href="index.html" class="back-button">Back to Cards</a>
+    </div>
+    <script>
+        
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const cardId = urlParams.get('id');
+    
+        if (cardId) {
+            
+            const cardDetails = {
+                1: 'Details for Card 1',
+                2: 'Details for Card 2',
+                3: 'Details for Card 3',
+                4: 'Details for Card 4',
+                5: 'Details for Card 5',
+                6: 'Details for Card 6',
+                7: 'Details for Card 7',
+                8: 'Details for Card 8',
+                9: 'Details for Card 9',
+                10: 'Details for Card 10',
+                11: 'Details for Card 11',
+                12: 'Details for Card 12'
+            };
+    
+            const detailsElement = document.getElementById('card-details');
+            detailsElement.textContent = cardDetails[cardId] || 'Details not found.';
+        } else {
+            document.getElementById('card-details').textContent = 'No details available.';
+        }
+    });
+    
+    </script>
+</body>
+
+</html>
+ 

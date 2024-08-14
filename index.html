@@ -1,0 +1,73 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            width: 80%;
+            
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .card:hover {
+            background: #e0e0e0;
+        }
+
+        .card-details {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 80%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <a href="details.html?id=1" class="card">Card 1</a>
+        <a href="details.html?id=2" class="card">Card 2</a>
+        <a href="details.html?id=3" class="card">Card 3</a>
+        <a href="details.html?id=4" class="card">Card 4</a>
+        <a href="details.html?id=5" class="card">Card 5</a>
+        <a href="details.html?id=6" class="card">Card 6</a>
+        <a href="details.html?id=7" class="card">Card 7</a>
+        <a href="details.html?id=8" class="card">Card 8</a>
+        <a href="details.html?id=9" class="card">Card 9</a>
+        <a href="details.html?id=10" class="card">Card 10</a>
+        <a href="details.html?id=11" class="card">Card 11</a>
+        <a href="details.html?id=12" class="card">Card 12</a>
+    </div>
+</body>
+
+</html>
